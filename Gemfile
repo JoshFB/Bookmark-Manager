@@ -1,11 +1,14 @@
-source 'http://rubygems.org'
+source "https://rubygems.org"
+
+gem 'sinatra'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
-gem 'sinatra'
-gem 'capybara'
 
-
-group :development, :test do
-  gem "rspec"
+group :test do
+	gem 'rspec'
+	gem 'cucumber'
+	gem 'cucumber-sinatra'
+	gem 'capybara'
 	gem 'database_cleaner'
- end
+	gem 'launchy'
+end
